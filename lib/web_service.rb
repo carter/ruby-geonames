@@ -26,15 +26,11 @@ module Geonames
     end
 
     def WebService.get_element_child_float( element, child )
-      if !element.elements[child].nil?
-        element.elements[child][0].to_s.to_f
-      end
+      WebService.get_element_child_text(element, child).to_f
     end
 
     def WebService.get_element_child_int( element, child )
-      if !element.elements[child].nil?
-        element.elements[child][0].to_s.to_i
-      end
+      WebService.get_element_child_text(element, child).to_i
     end
 
     def WebService.element_to_postal_code ( element )
