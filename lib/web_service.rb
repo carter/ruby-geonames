@@ -21,7 +21,7 @@ module Geonames
   class WebService
     def WebService.get_element_child_text( element, child )
       if !element.elements[child].nil?
-        element.elements[child][0].to_s
+        element.elements[child].text
       end
     end
 
